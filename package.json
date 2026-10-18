@@ -1,0 +1,16 @@
+{
+  "name": "notabo-pages",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check scripts/build.mjs && node --check scripts/pages.test.mjs && python3 scripts/validate.py",
+    "test": "node --test scripts/pages.test.mjs",
+    "build": "node scripts/build.mjs",
+    "check:leaks": "python3 scripts/leaks.py"
+  }
+}
